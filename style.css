@@ -1,3 +1,11 @@
+/* IMAGEM FIXA NA TELA */
+ body{
+    background-image: url('./assets/img/tabela_bichos.png'); /* Caminho para a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Deixa a imagem fixa */
+    background-size: cover; /* Faz a imagem cobrir todo o fundo */
+}
 /* Estilização básica do menu */
 .menu-principal ul {
     /* Remove a formatação padrão da lista */
@@ -27,10 +35,10 @@
 }
 /* Container que adiciona a perspectiva 3D */
 .sphere-container {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     perspective: 800px; /* Adiciona profundidade à cena 3D */
-    margin: 50px auto; /* Centraliza o container */
+    margin: 5px left; /* Centraliza o container */
 }
 
 /* Estilização da imagem para se tornar uma esfera */
@@ -52,5 +60,45 @@
     to {
         transform: rotateY(360deg); /* Fim da rotação (360 graus) */
     }
+}
+.Cor_Azul  {
+    color: blue; /* Pode usar nome da cor ou código hexadecimal (#0000FF) */
+    background-color: white;
+    padding: 2px 2px; /* Preenchimento interno para dar a aparência de botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+    display: block; /* Ocupa todo o espaço */
+}
+.box-frase {
+    /* Tamanho do box */
+    width: 300px;           
+    height: 150px;          
+    box-sizing: border-box; 
+
+    /* Fundo Transparente */
+    background-color: transparent; 
+    /* Você também pode simplesmente remover a linha background-color inteira */
     
+    /* Estilos visuais */
+    border: 2px solid #333;    /* A borda ajuda a ver onde o box está */
+    padding: 20px;             
+    margin: 20px;              
+    
+    /* Centralização do texto */
+    display: flex;             
+    align-items: center;       
+    justify-content: center;   
+    text-align: center;        
+}
+.box-texto-centralizado {
+    text-align: center; /* Centraliza todo o texto dentro da div */
+    width: 100%;        /* Opcional: Garante que ocupe toda a largura disponível */
+    margin-top: 20px;   /* Adiciona um espaço acima do bloco, se necessário */
+}
+
+/* Opcional: Estilo para que os parágrafos fiquem com um tamanho de fonte parecido com um h3 */
+.box-texto-centralizado p {
+    font-size: 1.17em; /* Este é o tamanho padrão de um h3 no navegador */
+    margin: 0;         /* Remove margens padrão dos parágrafos para ficarem mais juntos */
+    line-height: 1.4;  /* Espaçamento entre linhas */
 }
