@@ -1,0 +1,56 @@
+/* Estilização básica do menu */
+.menu-principal ul {
+    /* Remove a formatação padrão da lista */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+    /* Coloca os itens na mesma linha usando Flexbox */
+    display: flex;
+    gap: 15px; /* Adiciona um espaçamento de 15px entre os itens */
+}
+
+/* Estilo para os links, transformando-os em botões */
+.menu-principal a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: white; /* Cor do texto */
+    background-color: #007BFF; /* Cor de fundo do botão */
+    padding: 10px 20px; /* Preenchimento interno para dar a aparência de botão */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Efeito de transição suave */
+    display: block; /* Ocupa todo o espaço do <li> */
+}
+
+/* Efeito de hover (quando o mouse passa por cima) */
+.menu-principal a:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+/* Container que adiciona a perspectiva 3D */
+.sphere-container {
+    width: 300px;
+    height: 300px;
+    perspective: 800px; /* Adiciona profundidade à cena 3D */
+    margin: 50px auto; /* Centraliza o container */
+}
+
+/* Estilização da imagem para se tornar uma esfera */
+.sphere-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha a área */
+    border-radius: 50%; /* Transforma a imagem em um círculo */
+    transform-style: preserve-3d; /* Mantém a imagem em um espaço 3D */
+    animation: spin 10s infinite linear; /* Aplica a animação de rotação */
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para dar mais profundidade */
+}
+
+/* Definição da animação de rotação */
+@keyframes spin {
+    from {
+        transform: rotateY(0deg); /* Início da rotação */
+    }
+    to {
+        transform: rotateY(360deg); /* Fim da rotação (360 graus) */
+    }
+    
+}
